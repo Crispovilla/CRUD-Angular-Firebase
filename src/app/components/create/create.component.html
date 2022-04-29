@@ -1,0 +1,32 @@
+<h2>Create Component</h2>
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="mb-3">
+    <label class="form-label">Producto</label>
+    <input formControlName="producto" type="text" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Cantidad</label>
+    <input formControlName="cantidad" type="number" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Stock</label>
+    <input formControlName="stock" type="number" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Precio unitario</label>
+    <input formControlName="valor_unitario" type="number" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Subtotal</label>
+    <input formControlName="subtotal" type="number" class="form-control" required>
+  </div>
+  <div class="button">
+     <button [disabled]="!productForm.valid" type="submit" class="btn btn-outline-primary"><i class="fa-solid fa-box-archive"></i></button>
+  <button (click)="back()" class="btn btn-outline-warning"><i class="fa-solid fa-circle-arrow-left"></i></button>
+
+  </div>
+
+
+</form>
+
